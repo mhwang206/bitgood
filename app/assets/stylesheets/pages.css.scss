@@ -1,3 +1,21 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.content {
+	margin: 30px;
+	padding: 30px;
+	background-color: white;
+}
+
+
+.stats {
+	color: #34495e;
+}
+
+.number_of_homeless {
+	color: #e67e22;
+	font-size: 40px;
+	font-weight: bold;
+}

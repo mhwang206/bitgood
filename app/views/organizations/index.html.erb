@@ -1,4 +1,10 @@
 <div class="meals_container">
+
+<div class="stats">
+	<h1><span class="number_of_homeless">58,423</span> Homeless in the city we love</h1>
+	<h2>They just need a little "bit" of your help</h2>
+</div>
+
 <% @organizations.each do |organization| %>
   <div class="meals">
     <%= link_to(organization_path(organization)) do%>

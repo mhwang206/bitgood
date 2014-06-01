@@ -14,12 +14,14 @@
       <div class="contact">
         <%= link_to 'Contact us', '#', :class=>"btn btn-info btn btn-block" %>
       </div>
+      <button class="bitcoinate" data-size="50" data-address="sdfasdvsdv">bitcoinate</button>
       <div id="googleMap" style="width: 300px; height: 300px;"></div>
     </div>
   </div>
   <h3><b>Wallet address:</b> <%= @organization.wallet_address %></h3>
 
-<button class="bitcoinate" data-size="50" data-address="sdfasdvsdv">bitcoinate</button>
+  <button type="button" class="btn btn-warning">Warning: Make you you copy the right address. Don't type it!</button>
+
 
   <script src="//gitcdn.org/libs/bitcoinate/0.2.1/index.min.js"></script>
 

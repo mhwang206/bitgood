@@ -12,10 +12,6 @@
 	<%= render 'layouts/nav' %>
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
-	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-	  </ol>
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
@@ -34,13 +30,5 @@
 		<% end %>
 
 	  <%= yield %>
-
-	  <div id="wrap">
-	    <div id="main" class="container clear-top">
-	      <p>Your content here</p>
-	    </div>
-	  </div>
-	  <footer class="footer"></footer>
-	</div>
 </body>
 </html>
