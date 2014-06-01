@@ -26,7 +26,7 @@ organizations = Organization.create([
 
 	{ name: 'Jordans Transitional Shelter', 
 		description: "Jordan’s Disciples Community Service is committed to preventing and ending homelessness by assisting in the development of short-term and long-term Transitional Housing Programs, affordable housing, and supportive services for the homeless and potentially homeless throughout Los Angeles County. When it’s hard to get the basic necessities of life, you need an organization that helps you get back on your feet.",
-		image_url: "http://www.jordansdisciplescommunityservice.org/image/45289567.png",
+		image_url: "http://i.imgur.com/MTMSAKa.png",
 		url: "http://www.jordansdisciplescommunityservice.org/",
 		wallet_address: "asdkfjsdklfassdf",
 		address: '1616 E. PINE ST. COMPTON, CA 90221'
