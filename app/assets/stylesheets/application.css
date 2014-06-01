@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+.slogan {
+/*	color: orange;*/
+	font-size: 50;
+}

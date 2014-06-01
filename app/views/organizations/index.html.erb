@@ -1,38 +1,19 @@
-<h1>Listing organizations</h1>
+<div class="meals_container">
+<% @organizations.each do |organization| %>
+  <div class="meals">
+    <%= link_to(organization_path(organization)) do%>
+    <div><%= image_tag(organization.image_url, size: '316x236') %></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th>Image url</th>
-      <th>Url</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Wallet address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @organizations.each do |organization| %>
-      <tr>
-        <td><%= organization.name %></td>
-        <td><%= organization.description %></td>
-        <td><%= organization.address %></td>
-        <td><%= organization.image_url %></td>
-        <td><%= organization.url %></td>
-        <td><%= organization.phone %></td>
-        <td><%= organization.email %></td>
-        <td><%= organization.wallet_address %></td>
-        <td><%= link_to 'Show', organization %></td>
-        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-        <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-  </tbody>
-</table>
+    <div class="box_holder">
+    <div class="price"><strong><%= organization.name %></strong></div>  
+    <div class="title"><%= organization.description %></div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
 
 <br>
 

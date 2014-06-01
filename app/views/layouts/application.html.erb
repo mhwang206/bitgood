@@ -10,6 +10,24 @@
 <body>
 
 	<%= render 'layouts/nav' %>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="http://socialventurepartners.org.s3.amazonaws.com/www.socialventurepartners.org/sites/49/2013/05/Los-Angeles-Slider1.jpg" alt="meal" class="carousel_img">
+	      <div class="carousel-caption">
+	      	<img src="http://i.imgur.com/rhrqGP9.png" alt="bitcoin">
+	        <h1 class="slogan">Bitgood to the city you love</h1>
+	      </div>
+	    </div>
+	</div>
+
 	<div class="container">
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-info") %>

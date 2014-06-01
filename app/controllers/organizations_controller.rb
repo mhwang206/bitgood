@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @organizations = Organization.all
@@ -9,7 +10,7 @@ class OrganizationsController < ApplicationController
   end
 
   def new
-    @organization = Organization.new
+    @organization = current_user.organizations.build
   end
 
   def edit
@@ -17,7 +18,7 @@ class OrganizationsController < ApplicationController
 
 
   def create
-    @organization = Organization.new(organization_params)
+    @organization = current_user.organizations.build(organization_params)
     if @organization.save
       redirect_to @organization, notice: 'organization was successfully created.'
     else
@@ -42,6 +43,11 @@ class OrganizationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_organization
       @organization = Organization.find(params[:id])
+    end
+
+    def correct_user
+      @organization = current_user.organizations.find_by(id: params[:id])
+      redirect_to organizations_path, notice: "Not authorized to edit this organization" if @organization.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
